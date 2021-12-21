@@ -1,15 +1,21 @@
 name: Build and deploy - action
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
+   inputs:
+     IMAGE_NAME:
+      required: true
+      default: 'first'
+      
+     
+   
 
 env:
   CLUSTER_NAME: blackbird1
   RESOURCE_GROUP: Test
   NAMESPACE: default
-  IMAGE_NAME: azure-vote-front-github
+ 
+ 
 
 jobs:
   build:

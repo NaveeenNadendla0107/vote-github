@@ -8,7 +8,7 @@ on:
 env:
   CLUSTER_NAME: blackbird1
   RESOURCE_GROUP: Test
-  NAMESPACE: github
+  NAMESPACE: default
   IMAGE_NAME: azure-vote-front-github
 
 jobs:
@@ -45,9 +45,9 @@ jobs:
         cluster-name: ${{ env.CLUSTER_NAME }}
         resource-group: ${{ env.RESOURCE_GROUP }}
 
-    - name: "Create the namespace if it does not exist"
-      run: |
-        kubectl create ns ${{env.NAMESPACE}} --dry-run -o json | kubectl apply -f -
+   # - name: "Create the namespace if it does not exist"
+     # run: |
+      #  kubectl create ns ${{env.NAMESPACE}} --dry-run -o json | kubectl apply -f -
 
     - name: "Create container registry image pull secret"
       uses: Azure/k8s-create-secret@v1

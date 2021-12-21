@@ -6,8 +6,8 @@ on:
       - master
 
 env:
-  CLUSTER_NAME: aksaad
-  RESOURCE_GROUP: AKSAAD
+  CLUSTER_NAME: blackbird1
+  RESOURCE_GROUP: Test
   NAMESPACE: github
   IMAGE_NAME: azure-vote-front-github
 

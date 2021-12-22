@@ -34,8 +34,8 @@ jobs:
     
     - name: "Build and push to container registry"
       run: |
-        #docker build . -t ${{ secrets.REGISTRY_URL }}/${{env.IMAGE_NAME}}:${{ github.sha }}
-        docker push ${{ secrets.REGISTRY_URL }}/${{env.IMAGE_NAME}}:${{ github.sha }}
+        #docker build . -t ${{ secrets.REGISTRY_URL }}/${{ github.event.inputs.image }}:${{ github.sha }}
+        docker push ${{ secrets.REGISTRY_URL }}/${{ github.event.inputs.image }}:${{ github.sha }}
 
   deploy:
     needs: [build]

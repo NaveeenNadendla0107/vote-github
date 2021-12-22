@@ -11,8 +11,8 @@ on:
    
 
 env:
-  CLUSTER_NAME: blackbird1
-  RESOURCE_GROUP: Test
+  CLUSTER_NAME: blackbirdaks
+  RESOURCE_GROUP: Naveen
   NAMESPACE: default
  
  

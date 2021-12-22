@@ -2,10 +2,7 @@ name: Build and deploy - action
 
 on:
   workflow_dispatch:
-   inputs:
-     IMAGE_NAME:
-      required: true
-      default: 'first'
+ 
       
      
    
